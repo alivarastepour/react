@@ -11,7 +11,6 @@ const Holder = (props) => {
             <h1>
                 {value}
             </h1>
-            <button onClick={() => func('salam')}>this has to wait for click</button>
         </article>
     )
 }

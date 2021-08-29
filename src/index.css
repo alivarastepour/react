@@ -49,8 +49,3 @@ img:hover{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-article button{
-    background-color: white;
-    border: 2px black;
-    margin: 0.5rem;
-}
