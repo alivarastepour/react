@@ -14,7 +14,6 @@ const list = [
 ,
 {
     id : 2 ,
-
     value : 'It Ends with Us: A Novel',
     img : 'https://images-na.ssl-images-amazon.com/images/I/71lk10uajiL._AC_UL200_SR200,200_.jpg'
 }
@@ -36,14 +35,14 @@ const Main = () => {
   return (
       <section className={'keeper'}>
           {list.map((x) => {
-              return <Holder key={x.id} z={x}></Holder>
+              return <Holder key={x.id} {...x}></Holder>
           })}
       </section>
   )
 }
 
 const Holder = (props) => {
-    const { img , value } = props.z
+    const { img , value } = props
   return (
       <article>
       <img className={'ig'} src={img} alt=""/>
