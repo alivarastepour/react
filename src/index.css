@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: auto;
+    height: auto;
+    background-color: #d6fff7;
+
+}
+article{
+    background-color: #ffffff;
+    border-radius: 4%;
+}
+
+.keeper{
+    width: 90vw;
+    max-width: available;
+    margin: 5rem 1rem;
+    padding: 0 6rem;
+    gap: 1rem;
+    display: grid;
+    /*border-radius: 30px;*/
+}
+.ig{
+    border-radius: 20%;
+    padding: 0.5rem 0;
+}
+h1{
+    font-family: "JetBrains Mono Light", aakar, serif;
+    color: gray;
+    text-align: match-parent;
+    padding-left: 1.2rem;
+}
+.keeper p,.keeper div{
+    padding-left: 1.2rem;
+    font-family: "JetBrains Mono Light", aakar, serif;
+
+}
+img{
+    transition: transform .2s
+}
+img:hover{
+    transform: scale(1.01,1.01);
+}
+@media screen and (min-width: 768px) {
+    .keeper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
