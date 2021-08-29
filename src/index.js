@@ -43,8 +43,8 @@ const Main = () => {
 
 const Holder = (props) => {
     const { img , value } = props
-    const func = () => {
-      alert("oi ,salam")
+    const func = (x) => {
+      alert(x)
     }
   return (
       <article>
@@ -52,8 +52,8 @@ const Holder = (props) => {
     <h1>
         {value}
     </h1>
-          <button onClick={func}>this calls a method</button>
-          <button onClick={()=> alert("salam")}>this has a inline method</button>
+          <button onClick={func('salam')}>this will be invoked anyway</button>
+          <button onClick={() => func('salam')}>this has to wait for click</button>
       </article>
   )
 }
