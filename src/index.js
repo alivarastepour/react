@@ -43,12 +43,17 @@ const Main = () => {
 
 const Holder = (props) => {
     const { img , value } = props
+    const func = () => {
+      alert("oi ,salam")
+    }
   return (
       <article>
       <img className={'ig'} src={img} alt=""/>
     <h1>
         {value}
     </h1>
+          <button onClick={func}>this calls a method</button>
+          <button onClick={()=> alert("salam")}>this has a inline method</button>
       </article>
   )
 }
