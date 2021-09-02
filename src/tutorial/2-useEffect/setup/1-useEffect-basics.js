@@ -12,7 +12,8 @@ const UseEffectBasics = () => {
       document.title = `1 New Message`
     else
       document.title = `${value} New Messages`
-  })
+  }, [value])/*the second parameter is a dependency list, if u pass empty array it will just run on init\
+  if u pass different values, it will run everytime one of this value change*/
 
   return <>
     <h1>{value}</h1>
