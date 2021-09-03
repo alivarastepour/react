@@ -48,6 +48,7 @@ const UseEffectCleanup = () => {
     {/*<input id='o' type="text" placeholder='enter ur name'/>*/}
     {/*<input onSubmit={() => askName()} type="button" placeholder='enter'/>*/}
   <button className='btn' onClick={() => askName()}>{value1}</button>
+
   </>;
 };
 
