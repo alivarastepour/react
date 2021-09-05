@@ -7,6 +7,8 @@ import React, { useState } from 'react';
 
 const ControlledInputs = () => {
 
+  const [firstName, setFirstName] = useState('')
+  const [email, setEmail] = useState('')
   const handleChange = (e) => {/*e is the event object. preventDefault stops browser from reloading*/
     e.preventDefault()
 
@@ -17,11 +19,11 @@ const ControlledInputs = () => {
       <form className='form' onSubmit={handleChange}>{/*attention here as well*/}
         <div className='form-control'>
           <label htmlFor="firstName">name : </label>
-          <input type="text" name="firstName" id="firstName"/>
+          <input type="text" name="firstName" id="firstName" onChange={(e) => setFirstName(e.target.value)} value={firstName}/>
         </div>
         <div className='form-control'>
           <label htmlFor="email">email : </label>
-          <input type="text" name="email" id="email"/>
+          <input type="text" name="email" id="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
         </div>
         <button type='submit'>add person</button>
         {/*<button type='submit' onClick={handleChange}>add person</button>*/} {/*you can submit a form like this. remember that type should be submit*/}
