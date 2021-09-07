@@ -8,8 +8,7 @@ const UseRefBasics = () => {
   const ref = useRef(null)
   const hs = (e) => {
     e.preventDefault();
-    if (ref.current.valueOf().toString() === 'close')
-      window.close()
+    console.log(ref.current.value)
   }
   return <>
 
