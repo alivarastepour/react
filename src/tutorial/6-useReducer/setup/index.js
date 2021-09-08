@@ -1,28 +1,58 @@
 import React, { useState, useReducer } from 'react';
 import Modal from './Modal';
 import { data } from '../../../data';
+// import {reducer} from "../final/reducer";
 // reducer function
+
+
+
+
+const reducer = (state, action) => {
+  if (action.type === 'ADD_ITEM'){
+    const newPeople = [...state.people,action.payload]
+    return {...state,people: newPeople,isModelOpen: true,modalContent: 'item added'}
+  }
+  if (action.type === 'NO_VALUE'){
+    return {state,isModelOpen: true,modelContent: 'enter value'}
+  }
+}
+
+
+
+
+
+const defaultState = {
+  people:[],
+  isModelOpen:false,
+  modelContent:''
+}
+
+
+
+
 
 const Index = () => {
 
-  const [people, setPeople] = useState(data);
-  const [show,setShow] = useState(false)
+  const[state, dispatch] = useReducer(reducer,defaultState);
+
   const [name, setName] = useState('')
 
   const handler = (e) => {
     e.preventDefault();
     if (name){
-      setShow(true)
-      setPeople([...people,{id: Math.random() * 100 , name}])
-      setName('')
+      const newItem = {id:Math.random() * 100, name}
+      dispatch({type:'ADD_ITEM', payload:newItem})
+      setName(' ')
     }else{
-      setShow(true)
+      dispatch({type:'NO_VALUE'})
     }
   }
 
+
+
   return <>
 
-    {show && <Modal/>}
+    {state.isModelOpen && <Modal modelContent={state.modelContent}/>}
     <form onSubmit={handler} className='form'>
       <div>
         <input value={name} onChange={(e)=>setName(e.target.value)} type="text"/>
@@ -30,7 +60,7 @@ const Index = () => {
       <button type='submit'>add</button>
     </form>
     {
-      people.map((p)=>{
+      state.people.map((p)=>{
         return <div key={p.id}>
           <h4>{p.name}</h4>
         </div>
