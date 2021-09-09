@@ -1,21 +1,14 @@
 import React, { useState, useReducer } from 'react';
 import Modal from './Modal';
 import { data } from '../../../data';
+import {reducer} from "./reducer";
 // import {reducer} from "../final/reducer";
 // reducer function
 
 
 
 
-const reducer = (state, action) => {
-  if (action.type === 'ADD_ITEM'){
-    const newPeople = [...state.people,action.payload]
-    return {...state,people: newPeople,isModelOpen: true,modalContent: 'item added'}
-  }
-  if (action.type === 'NO_VALUE'){
-    return {state,isModelOpen: true,modelContent: 'enter value'}
-  }
-}
+
 
 
 
@@ -48,11 +41,13 @@ const Index = () => {
     }
   }
 
-
+  const closeModal = () => {
+      dispatch({type:'CLOSE_MODAL'})
+  }
 
   return <>
 
-    {state.isModelOpen && <Modal modelContent={state.modelContent}/>}
+    {state.isModelOpen && <Modal closeModal={closeModal} modelContent={state.modelContent}/>}
     <form onSubmit={handler} className='form'>
       <div>
         <input value={name} onChange={(e)=>setName(e.target.value)} type="text"/>
@@ -61,8 +56,9 @@ const Index = () => {
     </form>
     {
       state.people.map((p)=>{
-        return <div key={p.id}>
+        return <div key={p.id} className='item'>
           <h4>{p.name}</h4>
+          <button onClick={()=> dispatch({type : 'REMOVE_ITEM', payload:p.id})}>remove</button>
         </div>
       })
     }
