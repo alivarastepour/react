@@ -1,49 +1,52 @@
 import React, { useState } from 'react';
 
 const UseStateCounter = () => {
-  function inc() {
-    setValue(++value)
+
+  const setRange = () => {
+      setEndValue(endValue);
+      setStartValue(startValue);
+      setValue(startValue);
   }
-  function de() {
-    if (value === 0)
-      setValue(0)
+  const add = () => {
+    if (value + 1 > endValue)
+      setValue(startValue);
     else
-      setValue(--value)
+      setValue(++value);
   }
-  function re() {
-    setValue(0)
-  }
-
-  const complexIncrease = () => {
-    setTimeout(() =>{
-      // setValue(value + 1) wont work
-      // setValue(value++) will work
-      setValue(++value) //will work
-    }, 2000)
+  const sub = () => {
+    if (value - 1 < startValue)
+      setValue(endValue);
+    else
+      setValue(--value);
   }
 
-  const complexIncrease1 = () => {
-    setTimeout(() => {
-      setValue((prevState => {
-        return prevState + 1
-      }))
-    },2000)
+  const reset = () => {
+    setValue(startValue);
   }
 
-  let [value, setValue] = useState(0)
-  return <>
-    <section style={{margin: '4rem 0'}}>
-        <h2>regular counter</h2>
-        <h1>{value}</h1>
-      <button className='btn' onClick={() => inc()}>+</button>
-      <button className='btn' onClick={() => de()}>-</button>
-      <button className='btn' onClick={() => re()}>reset</button>
-      <h2>complex counter</h2>
-      <button className='btn' onClick={()=> complexIncrease()}>increase after two seconds</button>
-      {/*<button className='btn' onClick={()=> complexIncrease1()}>increase after two seconds</button> /!*more complex ex*!/*/}
+  let [value,setValue] = useState(0);
+  let [startValue,setStartValue] = useState(0);
+  let [endValue,setEndValue] = useState(0);
+
+    return <>
+      <div>
+        <label htmlFor="from">from : </label>
+        <input value={startValue} onChange={(e) => setStartValue(e.target.value)} className='form' id='from' type="text"/>
+        <label htmlFor="to">to : </label>
+        <input value={endValue} onChange={(e) => setEndValue(e.target.value)} className='form' id='to' type="text"/>
+        <button className='btn' onClick={setRange}>apply range</button>
+      </div>
+      <br/>
+      <h4>number range is from ${startValue} to ${endValue}</h4>
       <h1>{value}</h1>
-    </section>
-  </>;
+      <div >
+        <button onClick={add} className='btn'>increment</button>
+        <button onClick={sub} className='btn'>decrement</button>
+        <button onClick={reset}  className='btn'>reset</button>
+      </div>
+
+
+    </>
 };
 
 export default UseStateCounter;
