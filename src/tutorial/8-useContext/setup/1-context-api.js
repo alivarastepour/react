@@ -1,4 +1,6 @@
 import React, {createContext, useContext} from "react";
+
+
 const myContext = createContext("salam");
 
 const App = () => {
@@ -10,10 +12,10 @@ const App = () => {
 }
 
 const User = () => {
+    console.log(myContext)
+    const value = useContext(myContext)
     return (
-        <myContext.Consumer>
-            {value => <h1>{value}</h1>}
-        </myContext.Consumer>
+        <h1>{value}</h1>
     )
 }
 
