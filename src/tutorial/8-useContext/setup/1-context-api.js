@@ -1,52 +1,51 @@
-import React, { useState, useContext } from 'react';
-import { data } from '../../../data';
-// more components
-// fix - context api, redux (for more complex cases)
+import React, {createContext, useContext, useState} from "react";
 
 
-const PersonContext = React.createContext();
-// 2 components -> provider and consumer
+// const myContext = createContext("salam");
+//
+// const App = () => {
+//     const [v,s] = useState();
+//     return <>
+//         <input value={v} onChange={(e) => s(e.target.value)} type="text" className="form"/>
+//         <myContext.Provider value={v}>
+//             <User/>
+//         </myContext.Provider>
+//     </>
+// }
+//
+// const User = () => {
+//     return (
+//         <Avatar/>
+//     )
+// }
+//
+// const Avatar = () => {
+//     const value = useContext(myContext);
+//     return (
+//         <h1>{value}</h1>
+//     )
+// }
 
-const ContextAPI = () => {
-  const [people, setPeople] = useState(data);
-  const removePerson = (id) => {
-    setPeople((people) => {
-      return people.filter((person) => person.id !== id);
-    });
-  };
-  return (
-    <PersonContext.provider value='hello'>
-      <h3>prop drilling</h3>
-      <List people={people} removePerson={removePerson} />
-    </PersonContext.provider>
-  );
-};
+function App () {
+    const [s,v] = useState();
+    return <>
 
-const List = ({ people, removePerson }) => {
-  return (
-    <>
-      {people.map((person) => {
-        return (
-          <SinglePerson
-            key={person.id}
-            {...person}
-            removePerson={removePerson}
-          />
-        );
-      })}
+        <input value={s} onChange={(e)=>v(e.target.value)} type="text" className="form"/>
+        <User text={s}/>
+
     </>
-  );
-};
 
-const SinglePerson = ({ id, name, removePerson }) => {
-    const data = useContext(PersonContext);
-    console.log(data)
-  return (
-    <div className='item'>
-      <h4>{name}</h4>
-      <button onClick={() => removePerson(id)}>remove</button>
-    </div>
-  );
-};
+}
+function User (props) {
+    return (
+        <Avatar text={props.text} />
+    )
+}
+function Avatar (props) {
+    return (
+        <h1>{props.text}</h1>
+    )
+}
 
-export default ContextAPI;
+
+export default App;
