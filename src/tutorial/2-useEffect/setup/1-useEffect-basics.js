@@ -14,7 +14,7 @@ const useTimer = (reset,ss) => {
   },[reset,[]])
   return value ;
 }
-
+const a = 2;
 const UseEffectBasics = () => {
   let [s,ss] = useState(false);
   let value = useTimer(s,ss);
