@@ -1,9 +1,9 @@
 import React from 'react'
-import Setup from './tutorial/14-higher-order-components/higher-order-components';
+import Setup from './tutorial/15-portals/portals';
 function App() {
   return (
     <div className='container'>
-      <Setup/>
+      <Setup children={'salam'}/>
     </div>
   )
 }
