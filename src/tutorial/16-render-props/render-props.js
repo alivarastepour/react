@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Setup = () => {
     return (
@@ -8,12 +8,13 @@ const Setup = () => {
 
 const App = () => {
     return (
-        <API render={() => <div>FUCK</div>}/>
+        <API render1={() => <h1>FUCK</h1>} render={() => <div>FUCK</div>}/>
     )
 }
 const API = (props) => {
+    const [state,setState] = useState(false)
     return <>
-        <div>{props.render()}</div>
+        <div>{state ? props.render() : props.render1()}</div>
     </>
 }
 
