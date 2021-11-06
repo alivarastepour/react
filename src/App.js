@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/15-portals/portals';
+import Setup from './tutorial/16-render-props/render-props';
 function App() {
   return (
     <div className='container'>
