@@ -8,13 +8,13 @@ const Setup = () => {
 
 const App = () => {
     return (
-        <API render1={() => <h1>FUCK</h1>} render={() => <div>FUCK</div>}/>
+        <API value='me' render1={() => <h1>FUCK</h1>} render={() => <div>FUCK</div>}/>
     )
 }
 const API = (props) => {
     const [state,setState] = useState(false)
     return <>
-        <div>{state ? props.render() : props.render1()}</div>
+        <div>{state ? props.render() : props.render1()}<h1>{props.value}</h1></div>
     </>
 }
 
