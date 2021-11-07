@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/17-Flow/Flow';
+import Setup from './tutorial/2-useEffect/final/2-useEffect-cleanup';
 function App() {
   return (
     <div className='container'>
