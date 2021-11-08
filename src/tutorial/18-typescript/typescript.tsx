@@ -2,17 +2,22 @@ import React from "react";
 
 
 const Setup = () => {
+    interface d {
+        state: string,
+        hour: number
+    }
 
     const getHour = ():number => {
         const date = new Date();
         return date.getHours();
     }
-    const sample = (str:string, num: number):string => {
-        return str + num ;
+    const sample = (num: number):string => {
+        return num > 18 ? 'bye' : 'hello' ;
     }
+    const temp:d = {state:sample(getHour()), hour:getHour()}
 
     return <>
-        <h2>{sample('hello it\'s', getHour())} o'clock and im using typescript</h2>
+        <h2>{temp.state}. it's {temp.hour}</h2>
     </>
 }
 
