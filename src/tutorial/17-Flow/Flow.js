@@ -19,7 +19,7 @@ const App = ({data, name} ) => {
 
 const Setup = () => {
     const [a, b] = useState(0)
-    const x = (s: string, t: void): number => {
+    const x = (s, t) => {
         t(++s)
     }
     return <>
