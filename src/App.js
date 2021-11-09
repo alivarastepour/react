@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/19-proptypes/proptypes-typescript'
+import Setup from './tutorial/20-uncontrolled-component/uncontrolledComponent'
 function App() {
   return (
     <div className='container'>
