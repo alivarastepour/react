@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/18-typescript/function-type-expressions'
+import Setup from './tutorial/18-typescript/function-property'
 function App() {
   return (
     <div className='container'>
