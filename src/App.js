@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/22-events/clipboard-events'
+import Setup from './tutorial/18-typescript/function-type-expressions'
 function App() {
   return (
     <div className='container'>
