@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/22-events/clipboard-events'
+import Setup from './tutorial/1-useState/setup/6-useState-show-hide-component'
 function App() {
   return (
     <div className='container'>
