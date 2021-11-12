@@ -1,41 +1,14 @@
 import React, {useState} from "react";
 
 const Setup = () => {
-    let [value, setValue] = useState('')
+    let [value, setValue] = useState(false);
     return <>
-        <input className='form' value={value} placeholder='choose tom, dick or henry' onChange={e => setValue(e.target.value)} type="text"/>
+        <div>toggle button to change the text</div>
+        <input  onChange={(e) => setValue(e.target.checked)} className='btn' type="checkbox"/>
         {
-            value === 'tom' ? <Tom/> : value === 'dick' ? <Dick/> : value === 'henry' ? <Henry/> : <Error/>
+            value ? <h2>hello world</h2> : <h2>bye bye world</h2>
         }
     </>
-}
 
-const Tom = () => {
-    return <>
-
-        <h1>tom rendered</h1>
-
-    </>
-}
-
-const Dick = () => {
-    return <>
-
-        <h1>Dick rendered</h1>
-
-    </>
-}
-const Henry = () => {
-    return <>
-
-        <h1>Henry rendered</h1>
-
-    </>
-}
-
-const Error = () => {
-    return <>
-        <h1>Not Valid</h1>
-    </>
 }
 export default Setup;
