@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/1-useState/setup/7-useState-conditional-rendering'
+import Setup from './tutorial/18-typescript/generics'
 function App() {
   return (
     <div className='container'>

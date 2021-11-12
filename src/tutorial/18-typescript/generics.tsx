@@ -1,17 +1,23 @@
-import React from "react";
+import React, {Fragment} from "react";
+
 
 const Setup = () => {
-    type arrayString = Array<string>;
-    let ans:string = '';
-    const func = (param: arrayString) => {
-        for (let i = 0; i < param.length; i++) {
-            ans += param[i] + " "
-        }
-        return ans;
+
+    function f<T>(obj: T[]): T[] {
+        return new Array<T>().concat(obj)
     }
-    const array:arrayString = ["a",'n']
+
+
+
     return <>
-        <div>{func(array)}</div>
+            <div className='item'>- calling function with generic type number</div>
+            {
+                f<number>([1,2,3,4]).map(num => <h6 key={num} className='container'>this is the returned number : {num}</h6>)
+            }
+            <div className='item'>- calling function with generic type string</div>
+            {
+                f<string>(['a', 'b', 'c', 'd']).map(num => <h6 className='container' key={num}>this is the returned string : {num}</h6>)
+            }
     </>
 }
 
