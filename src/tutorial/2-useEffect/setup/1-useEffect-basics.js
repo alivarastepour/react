@@ -1,41 +1,16 @@
 import React, { useState, useEffect } from 'react';
-// by default runs after every re-render
-// cleanup function
-// second parameter
 
-const useTimer = (reset,ss) => {
-  let [value,setValue] = useState(0);
-  useEffect(()=>{
-    if (reset){
-      setValue(0);
-      ss(true)
-    }
-    // setInterval(()=>setValue(++value), 1000);
-  },[reset,[]])
-  return value ;
-}
-const a = 2;
-const UseEffectBasics = () => {
-  let [s,ss] = useState(false);
-  let value = useTimer(s,ss);
-
-  const reset = () => {
-    // value = useTimer() ;
-  }
-
+const Setup = () => {
+  let [state, setState] = useState(0);
+  useEffect(() => {
+    console.log('here')
+    document.title = state
+  },[state])
   return <>
-
-  <div>
-    <h1>{value}</h1>
-    <button onClick={()=>ss(true)} className='btn'>reset</button>
-  </div>
-
+    <button className='btn' onClick={() => setState(++state)}>click me</button>
+    <h3>the value is {state}</h3>
   </>
+}
 
 
-};
-
-
-
-
-export default UseEffectBasics;
+export default Setup;
