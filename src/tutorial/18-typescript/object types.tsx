@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Setup = () => {
     type a = {
@@ -9,6 +9,11 @@ const Setup = () => {
         name:string,
         age:number
     }
+
+    interface c {
+        readonly location:string
+    }
+
     function f(person: {name:string, age:number}):number {
         return person.age;
     }
@@ -22,9 +27,16 @@ const Setup = () => {
     function f3(person: {age?:number, name:string}) : string{
         return person.name + ' is ' + person.age;
     }
-
+    const [error, setError] = useState('');
     const o1:a = {name:'mamad', age:13};
     const o2:b = {name:'zohre', age:53};
+    const o3:c = {location:'foolad shahr'}
+    try {
+        // @ts-ignore
+        o3.location = 'ABCD';
+    }catch (E:any){
+        setError(E.stack)
+    }
 
     return <>
 
@@ -40,6 +52,10 @@ const Setup = () => {
             only name parameter :
             {f3({name: 'hadi'})}
         </p>
+        <p>trying to set a value to readonly property : </p>
+        <div>{error} it should be a error but it aint because assigning new value to read only property causes compile error; suppressing it with ts-ignore either wont throw exceptions</div>
+
+
     </>
 
 }
