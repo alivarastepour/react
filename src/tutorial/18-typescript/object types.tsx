@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import internal from "stream";
 
 const Setup = () => {
     type a = {
@@ -19,6 +20,16 @@ const Setup = () => {
         length:number
         age:number
     }
+
+    interface e {
+        name:string,
+        age:number
+    }
+    interface f extends e {
+        location:string
+    }
+    const o5:f = {name:'kolsoom', age:14, location:'isf'}
+
     let o4:d = {length:12, age:14}
     console.log(o4['age'])
     o4['age'] = 1333 // updating prev properties
