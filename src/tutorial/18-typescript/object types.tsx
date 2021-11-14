@@ -28,6 +28,17 @@ const Setup = () => {
     interface f extends e {
         location:string
     }
+
+    interface g {
+        age:number
+    }
+    interface h {
+        name:string
+    }
+    type i = g & h
+
+    const o6:i = {name:'ali', age:123}
+
     const o5:f = {name:'kolsoom', age:14, location:'isf'}
 
     let o4:d = {length:12, age:14}
