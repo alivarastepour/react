@@ -14,6 +14,16 @@ const Setup = () => {
         readonly location:string
     }
 
+    interface d {
+        [index : number] : number;
+        length:number
+        age:number
+    }
+    let o4:d = {length:12, age:14}
+    console.log(o4['age'])
+    o4['age'] = 1333 // updating prev properties
+    console.log(o4)
+    o4[1] = 12 //adding new properties
     function f(person: {name:string, age:number}):number {
         return person.age;
     }
@@ -31,12 +41,11 @@ const Setup = () => {
     const o1:a = {name:'mamad', age:13};
     const o2:b = {name:'zohre', age:53};
     const o3:c = {location:'foolad shahr'}
-    try {
-        // @ts-ignore
-        o3.location = 'ABCD';
-    }catch (E:any){
-        setError(E.stack)
-    }
+    // try {
+    //     o3.location = 'ABCD';
+    // }catch (E:any){
+    //     setError(E.stack)
+    // }
 
     return <>
 
