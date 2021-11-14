@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/2-useEffect/setup/5-useEffect-example 2'
+import Setup from './tutorial/18-typescript/object types'
 function App() {
   return (
     <div className='container'>
