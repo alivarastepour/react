@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/23-ESLint/eslint'
+import Setup from './tutorial/8-useContext/setup/2-useContext';
 function App() {
   return (
     <div className='container'>
