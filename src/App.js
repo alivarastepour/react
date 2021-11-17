@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/6-useReducer/setup/useReducer-example';
+import Setup from './tutorial/6-useReducer/setup/stopwatch';
 function App() {
   return (
     <div className='container'>
