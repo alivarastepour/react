@@ -92,7 +92,7 @@ const Index = () => {
 // }
 // const Index = () => {
 //
-//   const[state, dispatch] = useReducer(reducer,defaultState);
+//   const[state, dispatch] = useReducer(reducerHook,defaultState);
 //
 //   const [name, setName] = useState('')
 //
