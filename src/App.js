@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/8-useContext/setup/2-useContext';
+import Setup from './tutorial/6-useReducer/useReducer';
 function App() {
   return (
     <div className='container'>
