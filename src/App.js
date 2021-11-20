@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from './tutorial/6-useReducer/setup/stopwatch';
+import Setup from './tutorial/12-memo-useMemo-useCallback/setup/useCallback';
 function App() {
   return (
     <div className='container'>
