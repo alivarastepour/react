@@ -19,8 +19,6 @@ const Setup = ({handleCLick, value, setValue, calculate}) => {
                 <button onClick={() => setValue(prev => prev+9)}  className='GridItem btn'>9</button>
                 <button onClick={() => setValue(prev => prev+'*')}  className='GridItem btn'>*</button>
                 <button onClick={() => setValue(prev => prev+0)}  className='GridItem btn'>0</button>
-                <button onClick={() => setValue(prev => prev+'(')}  className='GridItem btn'>(</button>
-                <button onClick={() => setValue(prev => prev+')')}  className='GridItem btn'>)</button>
                 <button onClick={() => setValue(prev => prev+'^')}  className='GridItem btn'>^</button>
                 <button onClick={() => calculate()}  className='GridItem btn calculate'>=</button>
             </div>

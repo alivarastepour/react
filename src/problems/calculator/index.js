@@ -46,6 +46,7 @@ const Index = () => {
         else if (e.key === 'Enter') {
             calculate();
         }
+
     };
 
     return <>
