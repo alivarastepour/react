@@ -1,10 +1,10 @@
 import React from "react";
 import './styles.scss'
-const Setup = ({handleCLick}) => {
+const Setup = ({handleCLick, value, setValue}) => {
     return <>
         <div className='holder'>
             <h4 className='header'>my calculator</h4>
-            <input autoFocus={true} onKeyDown={(e) => handleCLick(e)} className='GridItem form input' type="text"/>
+            <input value={value} onChange={e => setValue(e.target.value)} autoFocus={true} onKeyDown={(e) => handleCLick(e)} className='GridItem form input' type="text"/>
             <div className='gridContainer'>
                 <button  className='GridItem btn'>1</button>
                 <button  className='GridItem btn'>2</button>
