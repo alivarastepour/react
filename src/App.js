@@ -1,9 +1,9 @@
 import React from 'react'
-import Setup from './problems/calculator';
+import Index from "./problems/calculator";
 function App() {
   return (
     <div className='container'>
-      <Setup/>
+      <Index/>
     </div>
   )
 }
