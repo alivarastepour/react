@@ -1,6 +1,6 @@
 import React from "react";
 import './styles.scss'
-const Setup = ({handleCLick, value, setValue}) => {
+const Setup = ({handleCLick, value, setValue, calculate}) => {
     return <>
         <div className='holder'>
             <h4 className='header'>my calculator</h4>
@@ -22,7 +22,7 @@ const Setup = ({handleCLick, value, setValue}) => {
                 <button onClick={() => setValue(prev => prev+'(')}  className='GridItem btn'>(</button>
                 <button onClick={() => setValue(prev => prev+')')}  className='GridItem btn'>)</button>
                 <button onClick={() => setValue(prev => prev+'^')}  className='GridItem btn'>^</button>
-                <button onClick={() => setValue(prev => prev+'=')}  className='GridItem btn calculate'>=</button>
+                <button onClick={() => calculate()}  className='GridItem btn calculate'>=</button>
             </div>
         </div>
     </>
