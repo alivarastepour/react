@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+.input {
+  margin: 0;
+  border: none;
+}
+
+.holder {
+  background: linear-gradient(to bottom right, rgba(244, 222, 255, 0.2), rgba(196, 255, 248, 0.1), rgba(244, 222, 255, 0.2));
+  width: 500px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.header {
+  padding-top: 10px;
+}
+
+.calculate {
+  grid-column: 1/5;
+}
+
+/*# sourceMappingURL=styles.css.map */
