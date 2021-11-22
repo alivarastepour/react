@@ -1,10 +1,20 @@
 import React from "react";
 import './styles.scss'
 const Setup = () => {
+
+    const handleCLick = (e) => {
+        if (!((parseInt(e.key) >= 0 && parseInt(e.key) <= 9) ||
+            (e.key === '/' || e.key === '*' || e.key === '+' || e.key === '-' || e.key === '^' || e.key === '=' || e.key === "Backspace")))
+        e.preventDefault();
+
+    }
+
+
+
     return <>
         <div className='holder'>
             <h4 className='header'>my calculator</h4>
-            <input className='GridItem form input' type="text"/>
+            <input autoFocus={true} onKeyDown={(e) => handleCLick(e)} className='GridItem form input' type="text"/>
             <div className='gridContainer'>
                 <button  className='GridItem btn'>1</button>
                 <button  className='GridItem btn'>2</button>
@@ -25,7 +35,7 @@ const Setup = () => {
                 <button  className='GridItem btn calculate'>=</button>
             </div>
         </div>
-
     </>
 }
+
 export default Setup;
