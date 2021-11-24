@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import App3 from "./tutorial/11-react-router/tutorial/link3";
 import Homepage from "./tutorial/11-react-router/tutorial/homepage";
+import Individual from "./tutorial/11-react-router/tutorial/individual";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
                   <Route path='/link2' element={<App2/>}/>
                   <Route path='/link3' element={<App3/>}/>
                   <Route path='*' element={<h1>nadarim🤨</h1>}/>
+                  <Route path='/person/:id' children={<Individual/>}>
+                  </Route>
               </Routes>
           </BrowserRouter>
       </div>
