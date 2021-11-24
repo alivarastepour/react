@@ -8,25 +8,21 @@ import {
     Routes,
     Route
 } from "react-router-dom";
+import App3 from "./tutorial/11-react-router/tutorial/link3";
 
 
 function App() {
   return (
       <div className='container'>
           <BrowserRouter>
-              <Setup/>
+              <Route path='/' element={<Setup/>}/>
               <Routes>
-                  <Route exact path='/'/>
                   <Route path='/link1' element={<App1/>}/>
                   <Route path='/link2' element={<App2/>}/>
+                  <Route path='/link3' element={<App3/>}/>
                   <Route path='*' element={<h1>oi🤨</h1>}/>
               </Routes>
           </BrowserRouter>
-          {
-              useData().map(a => {
-                  return <div key={a.id}>{a.login}</div>
-              })
-          }
       </div>
   )
 }

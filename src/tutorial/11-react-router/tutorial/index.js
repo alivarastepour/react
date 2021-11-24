@@ -6,12 +6,14 @@ const x = {
 }
 const Setup = () => {
     return <>
-        <h2>hello world</h2>
         <nav>
+            <h2>hello world</h2>
             <h2><Link style={x} to='/link1'>link1</Link></h2>
             <h2><Link style={x} to='/link2'>link2</Link></h2>
+            <h2><Link style={x} to='/link3'>link3</Link></h2>
         </nav>
         <Outlet/>
+
     </>
 }
 export default Setup ;
