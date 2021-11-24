@@ -13,10 +13,10 @@ function App() {
   return (
       <div className='container'>
           <BrowserRouter>
+              <Setup/>
               <Routes>
-                    <Route path='/' element={<Setup/>}/>
-                    <Route path='link1' element={<App1/>}/>
-                    <Route path='link2' element={<App2/>}/>
+                  <Route path='/link1' element={<App1/>}/>
+                  <Route path='/link2' element={<App2/>}/>
               </Routes>
           </BrowserRouter>
       </div>
