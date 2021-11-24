@@ -17,6 +17,7 @@ function App() {
               <Routes>
                   <Route path='/link1' element={<App1/>}/>
                   <Route path='/link2' element={<App2/>}/>
+                  <Route path='*' element={<h1>oi🤨</h1>}/>
               </Routes>
           </BrowserRouter>
       </div>
