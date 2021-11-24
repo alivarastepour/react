@@ -8,8 +8,8 @@ const Setup = () => {
     return <>
         <h2>hello world</h2>
         <nav>
-            <Link style={x} to='/link1'>link1</Link>
-            <Link style={x} to='/link2'>link2</Link>
+            <h2><Link style={x} to='/link1'>link1</Link></h2>
+            <h2><Link style={x} to='/link2'>link2</Link></h2>
         </nav>
         <Outlet/>
     </>
