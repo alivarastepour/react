@@ -3,7 +3,7 @@ import {Wrapper} from "./styles";
 
 const Setup = () => {
     return <>
-        <Wrapper>
+        <Wrapper alert>
             hello World
         </Wrapper>
 
