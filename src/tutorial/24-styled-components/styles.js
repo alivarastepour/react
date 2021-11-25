@@ -6,4 +6,10 @@ export const Wrapper = styled.div`
   font-size: 30px;
   font-weight: lighter;
   font-family: "Ubuntu Light", sans-serif;
-  color: ${props => props.alert ? "red" : "green"};`
+  color: ${props => props.alert ? "red" : "green"};
+`
+
+export const Details = styled(Wrapper)`
+  word-spacing: 10px;
+  font-size: 20px;
+`
