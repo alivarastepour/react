@@ -1,18 +1,12 @@
 import React from "react";
-import {Wrapper, Details, Info} from "./styles";
+import {Spinner} from "./styles";
 
 
 const Setup = () => {
     return <>
-        <Wrapper alert>
-            hello World
-        </Wrapper>
-        <Details>
-            i have inherited my styles from Wrapper Component
-        </Details>
-        <Info>
-            hii
-        </Info>
+        <Spinner>
+
+        </Spinner>
     </>
 }
 export default Setup
