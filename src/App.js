@@ -1,9 +1,9 @@
 import React from 'react'
-import Setup from "./tutorial/25-react-with-bootstrap";
+import Setup from "./tutorial/26-react-with-redux/index";
 
 function App() {
   return (
-      <div>
+      <div className='container'>
           <Setup/>
       </div>
   )
