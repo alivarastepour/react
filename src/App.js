@@ -1,10 +1,9 @@
 import React from 'react'
-import Setup from "./tutorial/24-styled-components";
-
+import Setup from "./tutorial/25-react-with-bootstrap";
 
 function App() {
   return (
-      <div className='container'>
+      <div>
           <Setup/>
       </div>
   )
