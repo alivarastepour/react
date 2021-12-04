@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from "./tutorial/26-react-with-redux/example-0";
+import Setup from "./tutorial/27-react-with-framer-motion";
 
 function App() {
   return (
