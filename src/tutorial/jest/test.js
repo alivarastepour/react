@@ -1,7 +1,13 @@
-const sum = require('./sum')
-const a = [1,2,3,4,5,6,7,8,9,0];
-const b = {'a':2, 'b':44};
-const c = {'a':2, 'b':44, 'c':21};
+const exp = (n) => {
+    if(n<100)
+        throw new Error('this is not valid')
+}
 test('wtf', () => {
-    expect(b).toEqual(c);
+    expect(() => exp(2)).toThrow();
+})
+test('wtf1', () => {
+    expect(() => exp(2)).toThrow(Error);
+})
+test('wtf2', () => {
+    expect(() => exp(2)).toThrow('this is not valid');
 })
