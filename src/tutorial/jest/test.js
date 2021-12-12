@@ -1,13 +1,16 @@
-const exp = (n) => {
-    if(n<100)
-        throw new Error('this is not valid')
+const mockMe = jest.fn(a => Math.sqrt(a))
+const t = (list) => {
+    for (let index = 0; index < list.length; index++) {
+        mockMe(list[index])
+    }
 }
-test('wtf', () => {
-    expect(() => exp(2)).toThrow();
+t([1, 4, 6])
+test('test121', () => {
+    expect(mockMe.mock.calls.length).toBe(3);
 })
-test('wtf1', () => {
-    expect(() => exp(2)).toThrow(Error);
+test('test122', () => {
+    expect(mockMe.mock.calls[2][0]).toBe(6);
 })
-test('wtf2', () => {
-    expect(() => exp(2)).toThrow('this is not valid');
+test('test123', () => {
+    expect(mockMe.mock.results[0].value).toBe(1);
 })
