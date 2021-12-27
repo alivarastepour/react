@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from "./tutorial/27-react-with-framer-motion";
+import Setup from "./tutorial/28-MUI";
 
 function App() {
   return (
