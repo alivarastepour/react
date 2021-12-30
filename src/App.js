@@ -1,6 +1,5 @@
 import React from 'react'
-import Setup from "./tutorial/28-MUI/ButtonGroup";
-
+import Setup from "./tutorial/28-MUI/Checkbox"
 function App() {
   return (
       <div className='container'>
