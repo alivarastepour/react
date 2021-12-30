@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from "./tutorial/28-MUI/Button";
+import Setup from "./tutorial/28-MUI/ButtonGroup";
 
 function App() {
   return (
