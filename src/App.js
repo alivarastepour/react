@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from "./tutorial/28-MUI/Rating" 
+import Setup from "./tutorial/28-MUI/Select" 
 function App() {
   return (
       <div className='container'>
