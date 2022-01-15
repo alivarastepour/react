@@ -1,5 +1,5 @@
 import React from 'react'
-import Setup from "./tutorial/28-MUI/Slider" 
+import Setup from "./tutorial/28-MUI/Switch" 
 function App() {
   return (
       <div className='container'>
