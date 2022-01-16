@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Icon";
+import Setup from "./tutorial/28-MUI/List";
 function App() {
   return (
     <div className="container">
