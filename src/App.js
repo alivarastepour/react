@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/List";
+import Setup from "./tutorial/28-MUI/DataGrid";
 function App() {
   return (
     <div className="container">
