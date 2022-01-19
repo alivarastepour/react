@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Dialog";
+import Setup from "./tutorial/28-MUI/Progress";
 function App() {
   return (
     <div className="container">
