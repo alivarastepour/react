@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Skeleton";
+import Setup from "./tutorial/28-MUI/Snackbar";
 function App() {
   return (
     <div className="container">
