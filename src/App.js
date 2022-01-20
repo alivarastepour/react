@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Progress";
+import Setup from "./tutorial/28-MUI/Skeleton";
 function App() {
   return (
     <div className="container">
