@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Snackbar";
+import Setup from "./tutorial/28-MUI/Accordion";
 function App() {
   return (
     <div className="container">
