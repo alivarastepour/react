@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/BottomNavigation";
+import Setup from "./tutorial/28-MUI/BreadCrumbs";
 function App() {
   return (
     <div className="container">
