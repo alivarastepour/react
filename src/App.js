@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Card";
+import Setup from "./tutorial/28-MUI/BottomNavigation";
 function App() {
   return (
     <div className="container">
