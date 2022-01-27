@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Menu";
+import Setup from "./tutorial/28-MUI/Pagination";
 function App() {
   return (
     <div className="container">
