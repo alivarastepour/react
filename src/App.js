@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Container";
+import Setup from "./tutorial/28-MUI/Grid";
 function App() {
   return (
     <div className="container">
