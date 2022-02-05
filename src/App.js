@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Tabs";
+import Setup from "./tutorial/28-MUI/Box";
 function App() {
   return (
     <div className="container">
