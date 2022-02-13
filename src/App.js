@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/ImageList";
+import Setup from "./tutorial/26-react-with-redux/Test";
 function App() {
   return (
     <div className="container">
