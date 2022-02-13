@@ -1,9 +1,9 @@
 import React from "react";
-import Test from "./tutorial/26-react-with-redux/ex2/test";
+import Setup from "./tutorial/26-react-with-redux/ex3";
 function App() {
   return (
     <div className="container">
-      <Test />
+      <Setup />
     </div>
   );
 }
