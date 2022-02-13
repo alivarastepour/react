@@ -20,7 +20,6 @@ const mapStateToProps = (state) => {
 };
 
 const Comp = ({ setAge, setMarried, setName, name, age, married }) => {
-  console.log("salam");
   return (
     <>
       <input type="text" onChange={(e) => setName(e.target.value)} />
