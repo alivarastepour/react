@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/29-generators/generators";
+import Setup from "./tutorial/26-react-with-redux/ex5";
 function App() {
   return (
     <div className="container">
