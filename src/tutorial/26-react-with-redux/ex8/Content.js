@@ -1,34 +1,22 @@
 import React from 'react'
-import {connect} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {add, sub, dub} from "./slice";
 
 
-const mapStateToProps = (state) => {
-    return {
-        count:state.reducer.count
-    }
-}
 
-const mapDispatchToProps = dispatch => {
-    return {
-        add: () => dispatch(add()),
-        sub: () => dispatch(sub()),
-        dub: () => dispatch(dub()),
-    }
-}
-
-const ContentX = ({count, add, dub, sub}) => {
+const Content = () => {
+    const val = useSelector((state) => state.reducer.count);
+    const disp = useDispatch();
     return <>
         <div>
-            {count}
+            {val}
         </div>
         <div>
-            <button onClick={() => add()}>add</button>
-            <button onClick={() => sub()}>sub</button>
-            <button onClick={() => dub()}>dub</button>
+            <button onClick={() => disp(add())}>add</button>
+            <button onClick={() => disp(sub())}>sub</button>
+            <button onClick={() => disp(dub())}>dub</button>
         </div>
     </>
 }
-const Content = connect(mapStateToProps, mapDispatchToProps)(ContentX);
 
 export default Content;
