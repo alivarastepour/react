@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/DesignPatterns/Singleton";
+import Setup from "./tutorial/DesignPatterns/Proxy";
 function App() {
   return (
     <div className="container">
