@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/28-MUI/Switch";
+import Setup from "./tutorial/DesignPatterns/Singleton";
 function App() {
   return (
     <div className="container">
