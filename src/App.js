@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/DesignPatterns/Provider/Comp1";
+import Setup from "./tutorial/DesignPatterns/Prototype/prototype";
 function App() {
   return (
     <div className="container">
