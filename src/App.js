@@ -1,5 +1,5 @@
 import React from "react";
-import Setup from "./tutorial/DesignPatterns/Module";
+import Setup from "./tutorial/DesignPatterns/Mixin";
 function App() {
   return (
     <div className="container">
