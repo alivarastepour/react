@@ -1,4 +1,4 @@
-import Data from "./hoc";
+import Data from "./hoc1";
 
 const Setup = () => {
     return <>
